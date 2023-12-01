@@ -243,9 +243,23 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
+    <div class="column">
+      <div>
+        <img-comparison-slider>
+          <figure slot="first" class="before">
+            <!-- <img height="100%" width="100%" src="./media/distill/dense.png"> -->
+            <img height="100%" width="100%" src="./media/gif/tree.gif">
+            <figcaption>radiance field <br> &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 Original </figcaption>
+          </figure>
+          <figure slot="second" class="after">
+            <img height="100%" width="100%" src="./media/gif/tree_feature.gif">             
+            <figcaption>feature field <br> &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 Distilled</figcaption>
+        </img-comparison-slider>
+      </div>
+    </div>
+    <!-- <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
@@ -256,8 +270,8 @@
         portraits.
       </h2>
     </div>
-  </div>
-</section> -->
+  </div> -->
+</section>
 
 
 <!-- <section class="hero is-light is-small">
@@ -561,16 +575,11 @@
           <img-comparison-slider>
             <figure slot="first" class="before">
               <!-- <img height="100%" width="100%" src="./media/distill/dense.png"> -->
-              <!-- <img height="100%" width="100%" src="./media/gif/tree.gif"> -->
-              <video id="radiance_field" autoplay muted loop playsinline height="100%">
-                <source src="./media/gif/tree.mp4">
+              <img height="100%" width="100%" src="./media/gif/tree.gif">
               <figcaption>radiance field <br> &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 Original </figcaption>
-            <!-- </figure> -->
-            </video>
+            </figure>
             <figure slot="second" class="after">
-              <!-- <img height="100%" width="100%" src="./media/gif/tree_feature.gif"> -->
-              <video id="feature_field" autoplay muted loop playsinline height="100%">
-                <source src="./media/gif/tree_feature.mp4">              
+              <img height="100%" width="100%" src="./media/gif/tree_feature.gif">             
               <figcaption>feature field <br> &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 &#8203 Distilled</figcaption>
           </img-comparison-slider>
         </div>
