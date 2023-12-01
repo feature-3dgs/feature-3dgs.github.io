@@ -172,7 +172,7 @@
               <span class="author-block">
                 <a href="https://ShijieZhou-UCLA.github.io/">Shijie Zhou</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="http://linkedin.com/in/haoran-chang-201399262">Haoran Chang</a><sup>1</sup>,</span>
+                <a href="">Haoran Chang</a><sup>1</sup>,</span>
               <span class="author-block">
                 <a href="">Sicheng Jiang</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -386,21 +386,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            With the onset of diffusion-based generative models and their ability to generate 
-            text-conditioned images, content generation has received a massive invigoration. 
-            Recently, these models have been shown to provide useful guidance for the generation 
-            of 3D graphics assets. 
-            However, existing work in text-conditioned 3D generation faces fundamental constraints: 
-            (i) inability to generate detailed, multi-object scenes, 
-            (ii) inability to textually control multi-object configurations, and 
-            (iii) physically realistic scene composition. 
-            In this work, we propose CG3D, a method for compositionally generating scalable 
-            3D assets that resolves these constraints. 
-            We find that explicit Gaussian radiance fields, parameterized to allow for compositions 
-            of objects, possess the capability to enable semantically and physically consistent scenes. 
-            By utilizing a guidance framework built around this explicit representation, we show state of
-            the art results, capable of even exceeding the guiding diffusion model in terms of object 
-            combinations and physics accuracy.
+            3D scene representations have gained immense popularity in recent years. 
+            Methods that use Neural Radiance fields are versatile for traditional tasks such as novel view synthesis. 
+            In recent times, some work has emerged that aims to extend the functionality of NeRF beyond view synthesis, 
+            for semantically aware tasks such as editing and segmentation using 3D feature field distillation from 2D foundation models. 
+            However, these methods have two major limitations: (a) they are limited by the rendering speed of NeRF pipelines, 
+            and (b) implicitly represented feature fields suffer from continuity artifacts reducing feature quality. 
+            Recently, 3D Gaussian Splatting has shown state-of-the-art performance on real-time radiance field rendering. 
+            In this work, we go one step further: in addition to radiance field rendering, 
+            we enable 3D Gaussian splatting on arbitrary-dimension semantic features via 2D foundation model distillation. 
+            This translation is not straightforward: naively incorporating feature fields in the 3DGS framework leads to warp-level divergence. 
+            We propose architectural and training changes to efficiently avert this problem. Our proposed method is general, 
+            and our experiments showcase novel view semantic segmentation, language-prompted editing and segment anything 
+            through learning feature fields from state-of-the-art 2D foundation models such as SAM and CLIP-LSeg. 
+            Across experiments, our distillation method is able to provide comparable or better results, 
+            while being significantly faster to both train and render. Additionally, to the best of our knowledge, 
+            we are the first method to enable point and bounding-box prompting for radiance field manipulation, 
+            by leveraging the SAM model.
           </p>
           
           <div class="columns is-centered has-text-centered">
