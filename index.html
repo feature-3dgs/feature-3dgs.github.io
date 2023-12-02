@@ -246,23 +246,39 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="column">
-      <div>
-        <img-comparison-slider>
-          <figure slot="first" class="before">
-            <!-- <img height="100%" width="100%" src="./media/distill/dense.png"> -->
-            <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
-            <figcaption> Radiance Field </figcaption>
-          </figure>
-          <figure slot="second" class="after">
-            <img height="100%" width="100%" src="./media/gif/lseg.gif">
-            <!-- <img height="100%" width="100%" src="./media/gif/sam.gif">  -->
-            <figcaption> Distilled Feature Field </figcaption>
-        </img-comparison-slider>
+        <!-- First Slider -->
+        <div id="slider1-container">
+            <img-comparison-slider id="slider1">
+                <figure slot="first" class="before">
+                    <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
+                    <figcaption>Radiance Field </figcaption>
+                </figure>
+                <figure slot="second" class="after" id="gif-2">
+                    <img height="100%" width="100%" src="./media/gif/lseg.gif">
+                    <figcaption>Distilled Feature Field (LSeg)</figcaption>
+                </figure>
+            </img-comparison-slider>
+        </div>
+
+        <!-- Second Slider, initially hidden -->
+        <div id="slider2-container" style="display: none;">
+            <img-comparison-slider id="slider2">
+                <figure slot="first" class="before" id="gif-3">
+                    <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
+                    <figcaption>Radiance Field </figcaption>
+                </figure>
+                <figure slot="second" class="after" id="gif-4">
+                    <img height="100%" width="100%" src="./media/gif/sam.gif">
+                    <figcaption>Distilled Feature Field (SAM)</figcaption>
+                </figure>
+            </img-comparison-slider>
+        </div>
+        <button id="switch-slider" onclick="toggleSliders()">Switch Slider</button>
         <h2 class="subtitle has-text-centered">
           Feature 3DGS enables the distillation of 3D feature fields from any 2D foundation models, using only 15 training views for this complex real-world scene.
-        </h2>
-      </div>
+        </h2>        
     </div>
+</div>
 
     <!-- <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -886,6 +902,23 @@
     </div>
   </div>
 </footer>
+
+<script>
+  function toggleSliders() {
+      // Get both slider containers
+      var slider1 = document.getElementById("slider1-container");
+      var slider2 = document.getElementById("slider2-container");
+
+      // Toggle visibility
+      if (slider1.style.display === "none") {
+          slider1.style.display = "block";
+          slider2.style.display = "none";
+      } else {
+          slider1.style.display = "none";
+          slider2.style.display = "block";
+      }
+  }
+</script>
 
 </body>
 </html>
