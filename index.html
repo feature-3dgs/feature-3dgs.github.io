@@ -561,7 +561,109 @@
       Our explicit scene representation, coupled with feature fields, enables precise 3D editing prompted by natural language. <br> <br>
     </p>
     <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-6">Original Scene</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./media/editing/edit_scene_original.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <h2 class="title is-6">Deleting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/editing/edit_scene_delete.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+      
+      <!--/ Matting. -->
+    </div>
+    <div class="columns is-centered">
+
+      <div class="column">
+        <h2 class="title is-6">Rearrange</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/editing/edit_scene_rearrange.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-6">Editing</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/editing/edit_scene_editing.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+      
+      <!--/ Matting. -->
+    </div>
+
+    <style>
+      .before,
+      .after {
+        margin: 0;
+      }
     
+      .before figcaption,
+      .after figcaption {
+        background: #fff;
+        border: 1px solid #c0c0c0;
+        border-radius: 4px;
+        color: #2e3452;
+        opacity: 0.8;
+        padding: 4px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 100%;
+      }
+    
+      .before figcaption {
+        left: 4px;
+      }
+    
+      .after figcaption {
+        right: 4px;
+      }
+    </style>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <h2 class="title is-3">Distillation</h2>
     <div class="columns is-centered">
