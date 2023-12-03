@@ -107,6 +107,85 @@
       right: 4px;
     }
   </style>
+
+<style>
+  .button-container_teaser {
+      display: flex;       
+      justify-content: center; 
+      align-items: center;
+  }
+
+  .glow-button {
+      position: relative;
+      display: inline-block;
+      padding: 2px;
+      border-radius: 10px;
+      z-index: 0;
+      margin-bottom: 15px;
+  }
+
+  .glow-button button {
+      background: transparent; 
+      border: none; 
+      color: white; 
+      padding: 5px 10px; 
+      font-size: 16px; 
+      border-radius: 10px; 
+      cursor: pointer; 
+      outline: none; 
+  }
+
+  .glow-button:before {
+      content: "";
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+  }
+
+  @keyframes glowing-button-85 {
+      0% { background-position: 0 0; }
+      50% { background-position: 400% 0; }
+      100% { background-position: 0 0; }
+  }
+
+  .glow-button:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+  }
+</style>
+
+<style>
+  .container_teaser {
+      display: flex; /* Enables Flexbox */
+      justify-content: center; /* Horizontally centers the content */
+      align-items: center; /* Vertically centers the content */
+      height: 100%; /* Set the height of the container */
+  }
+
+  .column_teaser {
+      flex: 0 0 auto; /* This ensures that the column doesn't grow or shrink */
+      width: 100%; /* Adjust this width as needed */
+      max-width: 800px; /* Adjust this max-width as needed */
+      margin: 0 auto; /* Centers the column within the container */
+  }
+</style>
   <script
   defer
   src="./static/js/image-comparison-slider.js"
@@ -244,10 +323,10 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="column">
+  <div class="container_teaser is-max-desktop">
+    <div class="column_teaser">
         <!-- First Slider -->
-        <div id="slider1-container">
+        <div id="slider1-container_teaser">
             <img-comparison-slider id="slider1">
                 <figure slot="first" class="before">
                     <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
@@ -261,10 +340,10 @@
         </div>
 
         <!-- Second Slider, initially hidden -->
-        <div id="slider2-container" style="display: none;">
+        <div id="slider2-container_teaser" style="display: none;">
             <img-comparison-slider id="slider2">
                 <figure slot="first" class="before" id="gif-3">
-                    <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
+                    <img height="100%" width="100%" src="./media/gif/teaser_rgb-2.gif">
                     <figcaption>Radiance Field </figcaption>
                 </figure>
                 <figure slot="second" class="after" id="gif-4">
@@ -273,7 +352,11 @@
                 </figure>
             </img-comparison-slider>
         </div>
-        <button id="switch-slider" onclick="toggleSliders()">Switch Slider</button>
+        <div class="button-container_teaser">
+          <div class="glow-button">
+              <button id="toggle-slider" onclick="toggleSliders()">Switch Feature Field🪄</button>
+          </div>
+      </div>
         <h2 class="subtitle has-text-centered">
           Feature 3DGS enables the distillation of 3D feature fields from any 2D foundation models, using only 15 training views for this complex real-world scene.
         </h2>        
@@ -873,8 +956,8 @@
 <script>
   function toggleSliders() {
       // Get both slider containers
-      var slider1 = document.getElementById("slider1-container");
-      var slider2 = document.getElementById("slider2-container");
+      var slider1 = document.getElementById("slider1-container_teaser");
+      var slider2 = document.getElementById("slider2-container_teaser");
 
       // Toggle visibility
       if (slider1.style.display === "none") {
