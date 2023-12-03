@@ -246,7 +246,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Feature 3DGS: Supercharging 3D Gaussian Splatting to Enable Distilled Feature Fields</h1>
+          <h1 class="title is-1 publication-title">Feature 3DGS 🪄: Supercharging 3D Gaussian Splatting to Enable Distilled Feature Fields</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://ShijieZhou-UCLA.github.io/">Shijie Zhou</a><sup>1</sup>,</span>
@@ -354,7 +354,7 @@
         </div>
         <div class="button-container_teaser">
           <div class="glow-button">
-              <button id="toggle-slider" onclick="toggleSliders()">Switch Feature Field🪄</button>
+              <button id="toggle-slider" onclick="toggleSliders()">Switch Feature Field 🪄</button>
           </div>
       </div>
         <h2 class="subtitle has-text-centered">
@@ -759,7 +759,7 @@
     
     <h3 class="title is-3">Segment Anything from Any View</h3>
     <p>
-      To segment anything in 3D, a few training view images is all you need. 
+      To segment anything in a 3D scene, a few training view images is all you need. 
       We seamlessly integrate the latest computer vision foundation model, Segment Anything Model (SAM), 
       into the novel view synthesis pipeline through feature field distillation. This integration enables swift and precise 
       responses without invoking the original SAM workflow.<br> <br>
@@ -768,9 +768,9 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-6">Original Scene</h2>
+          <h2 class="title is-6">Promptable Segmentation (Point)</h2>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./media/editing/edit_scene_original.mp4"
+            <source src="./media/sam/teatime_point.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -779,11 +779,24 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-6">Deleting</h2>
+        <h2 class="title is-6">Promptable Segmentation (Box)</h2>
         <div class="columns is-centered">
           <div class="column content">
             <video id="matting-video" autoplay controls muted loop playsinline height="100%">
-              <source src="./media/editing/edit_scene_delete.mp4"
+              <source src="./media/sam/teatime_box.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-6">Promptless Segmentation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./media/sam/teatime_all.mp4"
               type="video/mp4">
             </video>
           </div>
@@ -808,7 +821,7 @@
         </div>
       </div> -->
 
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-6">Editing</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -818,7 +831,7 @@
             </video>
           </div>
         </div>
-      </div>
+      </div> -->
 
       
       <!--/ Matting. -->
