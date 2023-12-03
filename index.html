@@ -329,11 +329,11 @@
         <div id="slider1-container_teaser">
             <img-comparison-slider id="slider1">
                 <figure slot="first" class="before">
-                    <img height="100%" width="100%" src="./media/gif/teaser_rgb.gif">
+                    <img height="100%" width="100%" src="./media/teaser/rgb1.gif">
                     <figcaption>Radiance Field </figcaption>
                 </figure>
                 <figure slot="second" class="after" id="gif-2">
-                    <img height="100%" width="100%" src="./media/gif/lseg.gif">
+                    <img height="100%" width="100%" src="./media/teaser/lseg.gif">
                     <figcaption>Distilled Feature Field (LSeg)</figcaption>
                 </figure>
             </img-comparison-slider>
@@ -343,11 +343,11 @@
         <div id="slider2-container_teaser" style="display: none;">
             <img-comparison-slider id="slider2">
                 <figure slot="first" class="before" id="gif-3">
-                    <img height="100%" width="100%" src="./media/gif/teaser_rgb-2.gif">
+                    <img height="100%" width="100%" src="./media/teaser/rgb2.gif">
                     <figcaption>Radiance Field </figcaption>
                 </figure>
                 <figure slot="second" class="after" id="gif-4">
-                    <img height="100%" width="100%" src="./media/gif/sam.gif">
+                    <img height="100%" width="100%" src="./media/teaser/sam.gif">
                     <figcaption>Distilled Feature Field (SAM)</figcaption>
                 </figure>
             </img-comparison-slider>
@@ -652,7 +652,7 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-6">Promptable Segmentation (Point)</h2>
+          <h2 class="title is-6">Segment by Point</h2>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./media/sam/teatime_point.mp4"
             type="video/mp4">
@@ -663,7 +663,7 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-6">Promptable Segmentation (Box)</h2>
+        <h2 class="title is-6">Segment by Box</h2>
         <div class="columns is-centered">
           <div class="column content">
             <video id="matting-video" autoplay controls muted loop playsinline height="100%">
@@ -676,7 +676,7 @@
       </div>
 
       <div class="column">
-        <h2 class="title is-6">Promptless Segmentation</h2>
+        <h2 class="title is-6">Segment Everything</h2>
         <div class="columns is-centered">
           <div class="column content">
             <video id="matting-video" autoplay controls muted loop playsinline height="100%">
